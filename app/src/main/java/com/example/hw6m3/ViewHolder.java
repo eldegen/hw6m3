@@ -22,7 +22,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     public void onBind(ItemModel model) {
         this.title.setText(model.getTitle());
         this.subtitle.setText(model.getSubtitle());
-//        this.number.setText(model.getNumber()); // soooooo bad >:(
+        this.number.setText(model.getNumber()); // soooooo bad >:(
         this.playtime.setText(model.getPlaytime());
     }
 }

@@ -35,13 +35,13 @@ public class SecondFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recycler);
         ArrayList<ItemModel> list = new ArrayList<>();
 
-        list.add(new ItemModel("Blank Space", "Taylor Swift", 1, "3:22"));
-        list.add(new ItemModel("Watch Me", "Silento", 2, "5:36"));
-        list.add(new ItemModel("Earned It", "The Weekend", 3, "4:51"));
-        list.add(new ItemModel("The Hills", "The Weekend", 4, "3:41"));
-        list.add(new ItemModel("Writing’s On The Wall", "The Hils", 5, "5:33"));
-        list.add(new ItemModel("Bad Habits", "Ed Sheeran", 6, "4:01"));
-        list.add(new ItemModel("CLONED", "LukHash", 7, "2:54"));
+        list.add(new ItemModel("Blank Space", "Taylor Swift", "1", "3:22"));
+        list.add(new ItemModel("Watch Me", "Silento", "2", "5:36"));
+        list.add(new ItemModel("Earned It", "The Weekend", "3", "4:51"));
+        list.add(new ItemModel("The Hills", "The Weekend", "4", "3:41"));
+        list.add(new ItemModel("Writing’s On The Wall", "The Hils", "5", "5:33"));
+        list.add(new ItemModel("Bad Habits", "Ed Sheeran", "6", "4:01"));
+        list.add(new ItemModel("CLONED", "LukHash", "7", "2:54"));
 
         recyclerAdapter = new RecyclerAdapter(list);
         recyclerView.setAdapter(recyclerAdapter);

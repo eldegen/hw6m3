@@ -3,10 +3,10 @@ package com.example.hw6m3;
 public class ItemModel {
     private String title;
     private String subtitle;
-    private int number;
+    private String number;
     private String playtime;
 
-    public ItemModel(String title, String subtitle, int number, String playtime) {
+    public ItemModel(String title, String subtitle, String number, String playtime) {
         this.title = title;
         this.subtitle = subtitle;
         this.number = number;
@@ -29,11 +29,11 @@ public class ItemModel {
         this.subtitle = subtitle;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
