@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class RecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
     private ArrayList<ItemModel> list = new ArrayList<>();
 
-    public RecyclerAdapter(ArrayList<ItemModel> list) {
+    public RecyclerAdapter(ArrayList<ItemModel> list, IOnClick iOnClick) {
         this.list = list;
     }
 

@@ -1,5 +1,6 @@
 package com.example.hw6m3;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -7,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +45,13 @@ public class SecondFragment extends Fragment {
         list.add(new ItemModel("Bad Habits", "Ed Sheeran", "6", "4:01"));
         list.add(new ItemModel("CLONED", "LukHash", "7", "2:54"));
 
-        recyclerAdapter = new RecyclerAdapter(list);
+        recyclerAdapter = new RecyclerAdapter(list, new IOnClick() {
+            @Override
+            public void onClick(int pos) {
+                Intent intent = new Intent(getActivity(), SecondActivity.class);
+                startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(recyclerAdapter);
     }
 }
