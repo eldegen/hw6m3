@@ -11,16 +11,18 @@ import java.util.ArrayList;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
     private ArrayList<ItemModel> list = new ArrayList<>();
+    private IOnClick listener;
 
-    public RecyclerAdapter(ArrayList<ItemModel> list, IOnClick iOnClick) {
+    public RecyclerAdapter(ArrayList<ItemModel> list, IOnClick listener) {
         this.list = list;
+        this.listener = listener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler, parent, false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, listener);
     }
 
     @Override
